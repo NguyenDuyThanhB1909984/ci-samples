@@ -9,6 +9,11 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+    - name: Upload Reports
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-reports
+        path: '${{ github.workspace }}/Reports'
     - name: Katalon Studio Github Action
       uses: katalon-studio/katalon-studio-github-action@v2.1
       with:
