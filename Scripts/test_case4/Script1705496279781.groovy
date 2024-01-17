@@ -18,7 +18,6 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
-
 WebUI.navigateToUrl('https://www.seleniumeasy.com/')
 
 WebUI.click(findTestObject('Object Repository/Page_Learn Selenium with Best Practices and_9593f6/a_Selenium'))

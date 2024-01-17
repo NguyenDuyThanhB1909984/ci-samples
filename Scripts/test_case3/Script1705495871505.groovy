@@ -41,6 +41,5 @@ WebUI.click(findTestObject('Object Repository/Page_InMotion Hosting/center_ecbiz
 WebUI.click(findTestObject('Object Repository/Page_InMotion Hosting/h2_ecbiz312.inmotionhosting.com'))
 WebUI.takeFullPageScreenshot()
 WebUI.click(findTestObject('Object Repository/Page_InMotion Hosting/h2_ecbiz312.inmotionhosting.com'))
-
 WebUI.closeBrowser()
 
