@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Selenium with Java</name>
+   <tag></tag>
+   <elementGuidId>a7c359c6-7363-4450-831a-2aa7df9e3b18</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='navbar-collapse']/nav/ul/li[2]/ul/li/a</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>ul.dropdown-menu > li.first.leaf > a</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>57f27f7b-eadc-4843-ace6-a5ff0d36d5d9</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>/selenium-tutorials</value>
+      <webElementGuid>e890a721-80d4-4a22-b6a6-5af89bf25f19</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Selenium with Java</value>
+      <webElementGuid>8cecffd7-df3b-48f3-9f45-79d3de904dbe</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;navbar-collapse&quot;)/nav[1]/ul[@class=&quot;menu nav navbar-nav&quot;]/li[@class=&quot;expanded active dropdown open&quot;]/ul[@class=&quot;dropdown-menu&quot;]/li[@class=&quot;first leaf&quot;]/a[1]</value>
+      <webElementGuid>42d1b968-b285-455b-be0a-ac747a49eb34</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='navbar-collapse']/nav/ul/li[2]/ul/li/a</value>
+      <webElementGuid>9c94eb61-449e-4d6e-b36a-ed74d1588beb</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'Selenium with Java')]</value>
+      <webElementGuid>1b2a8efe-a0f4-46d1-98bc-03c5d0a5c104</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, '/selenium-tutorials')]</value>
+      <webElementGuid>808ef62b-3f1e-43a7-a594-db3638a6bef3</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//li[2]/ul/li/a</value>
+      <webElementGuid>f1200562-1826-467c-9b4d-6a0094246251</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = '/selenium-tutorials' and (text() = 'Selenium with Java' or . = 'Selenium with Java')]</value>
+      <webElementGuid>47376ff5-e018-4484-8cc6-064ee9f07762</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

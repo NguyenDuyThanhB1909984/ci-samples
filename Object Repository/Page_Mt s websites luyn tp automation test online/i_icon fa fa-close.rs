@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>i_icon fa fa-close</name>
+   <tag></tag>
+   <elementGuidId>0c4765cb-1ef1-491f-9deb-af7d2a854da2</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='app-container']/div[2]/div/div[3]/i</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>i.icon.fa.fa-close</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>i</value>
+      <webElementGuid>1c586832-b59d-491f-8316-6a01780cc280</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>icon fa fa-close</value>
+      <webElementGuid>a84350b0-a08e-48d7-aa45-e8aadc2c0ddd</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;app-container&quot;)/div[@class=&quot;fixed-bottom-bar fixedBottombar&quot;]/div[@class=&quot;wrapper d-flex&quot;]/div[@class=&quot;icon-close&quot;]/i[@class=&quot;icon fa fa-close&quot;]</value>
+      <webElementGuid>1d2e98d7-66ba-43c7-a4f4-0f5e340ad1d3</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='app-container']/div[2]/div/div[3]/i</value>
+      <webElementGuid>2aadb84b-ad1a-4819-a13b-9d171bf9824f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div/div[3]/i</value>
+      <webElementGuid>845af998-4a65-434e-a7dd-2c83d7a39c5f</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

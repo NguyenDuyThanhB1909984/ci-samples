@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Failed to launch chrome browser using sel_1f4a6d</name>
+   <tag></tag>
+   <elementGuidId>1e2b7cd0-2dc8-4913-9218-1fce8eb4ab9e</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//section[@id='block-easy-breadcrumb-easy-breadcrumb']/div/span[5]/a</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>a.easy-breadcrumb_segment.easy-breadcrumb_segment-title</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>457ed5f6-4e9b-41f8-8e1f-d0134eeed5cf</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>/selenium-tutorials/failed-to-launch-chrome-browser-selenium-latest</value>
+      <webElementGuid>1b29222a-a0c6-4bfb-b470-f970df8efa05</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>easy-breadcrumb_segment easy-breadcrumb_segment-title</value>
+      <webElementGuid>e620817e-d70c-4c71-96c7-136ad3bbd208</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Failed to launch chrome browser using selenium 4.8.2</value>
+      <webElementGuid>cd1ec133-c611-4c05-bf7c-cc2d8807113d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;block-easy-breadcrumb-easy-breadcrumb&quot;)/div[@class=&quot;easy-breadcrumb&quot;]/span[5]/a[@class=&quot;easy-breadcrumb_segment easy-breadcrumb_segment-title&quot;]</value>
+      <webElementGuid>09c591b7-b8e5-4caa-ae48-68ba6a56178b</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//section[@id='block-easy-breadcrumb-easy-breadcrumb']/div/span[5]/a</value>
+      <webElementGuid>5181948c-be47-4966-a980-093e56472b7f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'Failed to launch chrome browser using selenium 4.8.2')]</value>
+      <webElementGuid>fe84dc37-eb2c-4361-ace7-aeaffbca383b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, '/selenium-tutorials/failed-to-launch-chrome-browser-selenium-latest')]</value>
+      <webElementGuid>4dbad774-5a7a-436f-bea7-9c564b2a847e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//span[5]/a</value>
+      <webElementGuid>8dfe476f-de03-4bc1-9264-3dc1fc58a982</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = '/selenium-tutorials/failed-to-launch-chrome-browser-selenium-latest' and (text() = 'Failed to launch chrome browser using selenium 4.8.2' or . = 'Failed to launch chrome browser using selenium 4.8.2')]</value>
+      <webElementGuid>b83bfbcb-5ee4-44b6-8e05-3da41237da0f</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

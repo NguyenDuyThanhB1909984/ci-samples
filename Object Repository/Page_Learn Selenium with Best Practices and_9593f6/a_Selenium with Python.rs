@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Selenium with Python</name>
+   <tag></tag>
+   <elementGuidId>cb152cb9-ad19-45ec-b2e0-8eac10f979c8</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='navbar-collapse']/nav/ul/li[2]/ul/li[2]/a</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>li.last.leaf > a</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>fd51bcca-cf85-42c8-a849-f7a828906907</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>/python</value>
+      <webElementGuid>c0c42798-a874-4201-95f5-da6f793f4c2c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Selenium with Python</value>
+      <webElementGuid>944bb934-0997-47b6-8753-8d9e3ceeab49</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;navbar-collapse&quot;)/nav[1]/ul[@class=&quot;menu nav navbar-nav&quot;]/li[@class=&quot;expanded active dropdown open&quot;]/ul[@class=&quot;dropdown-menu&quot;]/li[@class=&quot;last leaf&quot;]/a[1]</value>
+      <webElementGuid>eb91db35-4dc4-4b9e-a4f7-6fca8afaf350</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='navbar-collapse']/nav/ul/li[2]/ul/li[2]/a</value>
+      <webElementGuid>e4bae1dd-cfd2-480e-b7a0-58fb3f029da4</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'Selenium with Python')]</value>
+      <webElementGuid>8f164a59-aeb9-423e-b3cb-1abd19aee09d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, '/python')]</value>
+      <webElementGuid>13d77181-e0a5-4b01-ac46-7776452fb8e1</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//li[2]/ul/li[2]/a</value>
+      <webElementGuid>e2f9184e-bf00-4a4d-871d-e0228274fd6c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = '/python' and (text() = 'Selenium with Python' or . = 'Selenium with Python')]</value>
+      <webElementGuid>8b7b6dbb-8fed-44d2-953a-eb51b5afebec</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

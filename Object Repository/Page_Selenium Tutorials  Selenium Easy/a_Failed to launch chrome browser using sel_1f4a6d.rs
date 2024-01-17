@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Failed to launch chrome browser using sel_1f4a6d</name>
+   <tag></tag>
+   <elementGuidId>0b95257b-d71c-47a1-a4fd-da8f17365ae7</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//article[@id='node-297']/header/h2/a</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>h2 > a</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>3222c295-9453-4738-a3b1-d1cb3db77986</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>/selenium-tutorials/failed-to-launch-chrome-browser-selenium-latest</value>
+      <webElementGuid>09abbabc-f6e3-4f25-a840-e5e2837fe147</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Failed to launch chrome browser using selenium 4.8.2</value>
+      <webElementGuid>a49276a6-453c-47cf-bafd-8fa8b9329934</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;node-297&quot;)/header[1]/h2[1]/a[1]</value>
+      <webElementGuid>089ceee3-c87b-40aa-a11e-c2e42c4d89e3</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//article[@id='node-297']/header/h2/a</value>
+      <webElementGuid>2472fba8-3596-4e50-984e-78c3aa48cd0e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'Failed to launch chrome browser using selenium 4.8.2')]</value>
+      <webElementGuid>2bcc1d72-1757-4cbd-84da-b5bc3f7b0b24</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, '/selenium-tutorials/failed-to-launch-chrome-browser-selenium-latest')]</value>
+      <webElementGuid>55127fcd-0117-49a6-b291-5bc457deb31c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//h2/a</value>
+      <webElementGuid>da92ba5c-3ee0-4ead-86df-45b112fdcb5e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = '/selenium-tutorials/failed-to-launch-chrome-browser-selenium-latest' and (text() = 'Failed to launch chrome browser using selenium 4.8.2' or . = 'Failed to launch chrome browser using selenium 4.8.2')]</value>
+      <webElementGuid>549324ea-83ae-4cc2-a9c5-601501a72af4</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>
