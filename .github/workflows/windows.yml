@@ -9,13 +9,8 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-    - run: |
-        mkdir -p ${{ github.workspace }}/artifact
-        echo hello > ${{ github.workspace }}/artifact/world.txt
-    - uses: actions/upload-artifact@v4
-      with:
-        name: Upload Reports
-        path: ${{ github.workspace }}/artifact/**/*
+    - name: Create Reports Folder
+      run: mkdir -p ${{ github.workspace }}/Reports
     - name: Katalon Studio Github Action
       uses: katalon-studio/katalon-studio-github-action@v2.1
       with:
@@ -23,7 +18,8 @@ jobs:
           projectPath: '${{ github.workspace }}'
           args: '-noSplash -retry=0 -browserType=Chrome -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest" -apiKey= ${{ secrets.KATALON_API_KEY }} --config -webui.autoUpdateDrivers=true'
     - name: Upload Reports
+      if: always()
       uses: actions/upload-artifact@v4
       with:
         name: test-reports
-        path: '${{ github.workspace }}/Reports'
+        path: '${{ github.workspace }}/Reports/**/*'
