@@ -22,10 +22,10 @@ WebUI.openBrowser('')
 WebUI.navigateToUrl('https://www.seleniumeasy.com/')
 
 WebUI.click(findTestObject('Object Repository/Page_Learn Selenium with Best Practices and_9593f6/a_Selenium'))
-
+WebUI.takeFullPageScreenshot()
 WebUI.click(findTestObject('Object Repository/Page_Learn Selenium with Best Practices and_9593f6/a_Selenium with Python'))
 
 WebUI.click(findTestObject('Object Repository/Page_Selenium Tutorials with Python  Selenium Easy/a_Run tests in parallel with pytest'))
-
+WebUI.takeFullPageScreenshot()
 WebUI.click(findTestObject('Object Repository/Page_Run tests in parallel with pytest  Sel_645148/a_Run multiple protractor specs in parallel'))
 
