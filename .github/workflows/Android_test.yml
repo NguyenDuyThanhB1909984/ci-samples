@@ -18,7 +18,7 @@ jobs:
       - name: Start Android Emulator
         uses: reactivecircus/android-emulator-runner@v2
         with:
-          api-level: 23
+          api-level: 29
           license: accept
           headless: true
           emulator-flags: '-no-snapshot-save -no-boot-anim'
@@ -31,4 +31,6 @@ jobs:
         run: echo "Device ID is ${{ env.deviceId }}"
 
       - name: Terminate Emulator
-        run: adb -s ${{ steps.emulator.outputs.device-id }} emu kill
+        run: |
+          sleep 90  # Thời gian chờ 30 giây
+          adb -s ${{ steps.emulator.outputs.device-id }} emu kill
