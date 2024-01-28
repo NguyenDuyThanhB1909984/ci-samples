@@ -20,11 +20,11 @@ jobs:
 
 
 
-      - name: Chạy test
+      - name: Start emulator
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 29
-          script: ./gradlew connectedCheck -Pandroid.deviceSerial=${{ steps.get-device-id.outputs.stdout }}
+
      
       - name: Get device ID
         if: always()
