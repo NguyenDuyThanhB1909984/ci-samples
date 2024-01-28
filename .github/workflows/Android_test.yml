@@ -7,23 +7,28 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: checkout
         uses: actions/checkout@v4
 
-      - name: Enable KVM
-        run: |
-          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
-          sudo udevadm control --reload-rules
-          sudo udevadm trigger --name-match=kvm
+      - name: Change wrapper permissions
+        run: Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force; .\gradlew
 
-      - name: run tests
+      - name: Restore Cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            C:\Users\runneradmin\.gradle\caches
+            C:\Users\runneradmin\.gradle\wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
+      - name: Start Android Emulator
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 23
-          script: ./gradlew connectedCheck
-      - name: Get device ID
-        if: always()
-        run: adb devices
-        id: get-device-id
+          script: ./gradlew app:installDebug
+          license: accept
+
