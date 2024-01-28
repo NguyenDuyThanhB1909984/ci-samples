@@ -19,12 +19,16 @@ jobs:
           sudo udevadm trigger --name-match=kvm
       - name: Cài đặt Gradle
         uses: gradle/gradle-build-action@v2
-      - name: Start emulator
+      - name: Install android-emulator-runner
         uses: reactivecircus/android-emulator-runner@v2
         with:
-          api-level: 29
-          script: ./gradlew connectedCheck
-     
+          api-level: 30
+          package-name: "system-images;android-30;google_apis;x86"
+          emulator-version: 30
+      - name: Start Android Emulator
+        run: emulator -avd ${{ runner.os }}-emu -no-audio -no-window
+        
+             
       - name: Get device ID
         if: always()
         run: adb devices
