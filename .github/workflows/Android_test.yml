@@ -5,6 +5,13 @@ on:
   pull_request:
     branches: [ master ]
 
+name: Android Test
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [ master ]
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -12,10 +19,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Install adb
+        run: sudo apt-get install -y adb
+
       - name: Start Android Emulator
         uses: reactivecircus/android-emulator-runner@v2
         with:
-          api-level: 29
+          api-level: 23
           license: accept
           headless: true
           emulator-flags: '-no-snapshot-save -no-boot-anim'
