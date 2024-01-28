@@ -17,18 +17,13 @@ jobs:
           echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
           sudo udevadm control --reload-rules
           sudo udevadm trigger --name-match=kvm
-      - name: Cài đặt Gradle
-        uses: gradle/gradle-build-action@v2
-      - name: Install android-emulator-runner
+
+      - name: run tests
         uses: reactivecircus/android-emulator-runner@v2
         with:
-          api-level: 30
-          package-name: "system-images;android-30;google_apis;x86"
-          emulator-version: 30
-      - name: Start Android Emulator
-        run: emulator -avd ${{ runner.os }}-emu -no-audio -no-window
-        
-             
+          api-level: 29
+          script: ./gradlew connectedCheck
+            
       - name: Get device ID
         if: always()
         run: adb devices
