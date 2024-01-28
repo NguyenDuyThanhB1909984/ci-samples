@@ -18,13 +18,16 @@ jobs:
           sudo udevadm control --reload-rules
           sudo udevadm trigger --name-match=kvm
 
-
+      - name: Setup Android SDK
+        uses: actions/setup-android@v2
+        with:
+          sdk-version: 29
 
       - name: Start emulator
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 29
-
+          script: ./gradlew connectedCheck
      
       - name: Get device ID
         if: always()
