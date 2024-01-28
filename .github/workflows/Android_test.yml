@@ -9,13 +9,28 @@ jobs:
   test:
     runs-on: windows-latest
     steps:
-      - name: checkout
+      - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Change wrapper permissions
+        run: |
+          Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force
+          cmd /c .\gradlew
+
+      - name: Restore Cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            C:\Users\runneradmin\.gradle\caches
+            C:\Users\runneradmin\.gradle\wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
 
       - name: Start Android Emulator
         uses: reactivecircus/android-emulator-runner@v2
         with:
-          api-level: 23
+          api-level: 29
           license: accept
           headless: true
           emulator-flags: '-no-snapshot-save -no-boot-anim'
