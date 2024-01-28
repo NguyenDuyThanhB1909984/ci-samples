@@ -22,9 +22,10 @@ jobs:
         id: emulator
 
       - name: Get device ID
-        run: |
-          echo "deviceId=${{ steps.emulator.outputs.device-id }}" >> $GITHUB_ENV
-        shell: bash
+        run: echo "deviceId=${{ steps.emulator.outputs.device-id }}" >> $GITHUB_ENV
 
       - name: Show device ID
         run: echo "Device ID is ${{ env.deviceId }}"
+
+      - name: Terminate Emulator
+        run: adb -s ${{ steps.emulator.outputs.device-id }} emu kill
