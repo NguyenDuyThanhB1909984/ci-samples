@@ -9,22 +9,19 @@ jobs:
   test:
     runs-on: windows-latest
     steps:
-      - name: Checkout
+      - name: checkout
         uses: actions/checkout@v4
 
-      - name: Start Android Emulator
-        uses: reactivecircus/android-emulator-runner@v2
+      - name: Setup Android SDK
+        # Thay đổi đường dẫn cho phù hợp
+        run: |
+          Set-ExecutionPolicy RemoteSigned
+          $env:ANDROID_HOME="C:\Android\sdk"
+          $env:PATH="$env:PATH;$env:ANDROID_HOME\platform-tools"
+
+      - name: Chạy test
+        uses: microsoft/android-emulator-runner@v2
         with:
-          api-level: 29
-          license: accept
-          headless: true
-          emulator-flags: '-no-snapshot-save -no-boot-anim'
-        id: emulator
+          api-level: 23
+          script: ./gradlew connectedCheck
 
-      - name: Get device ID
-        run: echo "deviceId=${{ steps.emulator.outputs.device-id }}" >> $GITHUB_ENV
-
-      - name: Show device ID
-        run: echo "Device ID is ${{ env.deviceId }}"
-
-      # Do nothing, as no additional adb or emulator commands are needed on Windows
