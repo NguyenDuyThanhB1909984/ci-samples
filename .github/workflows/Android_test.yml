@@ -7,18 +7,15 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install adb
-        run: sudo apt-get install -y adb
-
       - name: Start Android Emulator
         uses: reactivecircus/android-emulator-runner@v2
         with:
-          api-level: 23
+          api-level: 29
           license: accept
           headless: true
           emulator-flags: '-no-snapshot-save -no-boot-anim'
@@ -30,7 +27,4 @@ jobs:
       - name: Show device ID
         run: echo "Device ID is ${{ env.deviceId }}"
 
-      - name: Terminate Emulator
-        run: |
-          sleep 1200  # Thời gian chờ 30 giây
-          adb -s ${{ steps.emulator.outputs.device-id }} emu kill
+      # Do nothing, as no additional adb or emulator commands are needed on Windows
