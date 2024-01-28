@@ -20,7 +20,7 @@ jobs:
           $env:PATH="$env:PATH;$env:ANDROID_HOME\platform-tools"
 
       - name: Chạy test
-        uses: microsoft/android-emulator-runner@v2
+        uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 23
           script: ./gradlew connectedCheck
