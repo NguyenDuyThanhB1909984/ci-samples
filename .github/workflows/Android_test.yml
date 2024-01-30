@@ -22,4 +22,7 @@ jobs:
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 29
-          script: adb devices
+          license: accept
+          headless: true
+          emulator-flags: '-no-snapshot-save -no-boot-anim'
+        id: emulators
