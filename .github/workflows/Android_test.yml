@@ -18,11 +18,8 @@ jobs:
           sudo udevadm control --reload-rules
           sudo udevadm trigger --name-match=kvm
 
-      - name: run tests
-        uses: reactivecircus/android-emulator-runner@v2
+      - name: Android Emulator with deviceId        
+        uses: NguyenDuyThanhB1909984/android-emulator-runner@v2.30.1
         with:
           api-level: 29
-          license: accept
-          headless: true
-          emulator-flags: '-no-snapshot-save -no-boot-anim'
-        id: emulators
+          script: adb devices
