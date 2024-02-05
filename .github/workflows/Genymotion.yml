@@ -31,4 +31,4 @@ jobs:
         with:
           email: ${{ secrets.GMSAAS_EMAIL }}
           password: ${{ secrets.GMSAAS_PASSWORD }}
-          recipe_uuid: 987dec22-9c55-4a91-9edd-8cc3658966b4
+          recipe_uuid: 4c015ada-e64e-4f5d-a320-06cbf6e95648
