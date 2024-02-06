@@ -18,8 +18,22 @@ jobs:
           sudo udevadm control --reload-rules
           sudo udevadm trigger --name-match=kvm
 
-      - name: Android Emulator with deviceId        
+      # - name: Android Emulator with deviceId        
+      #   uses: NguyenDuyThanhB1909984/android-emulator-runner@v2.30.1
+      #   with:
+      #     api-level: 29
+      #     script: adb devices
+      - name: Android Emulator with deviceId
         uses: NguyenDuyThanhB1909984/android-emulator-runner@v2.30.1
         with:
           api-level: 29
-          script: adb devices
+          script: |
+            # Install Katalon Studio
+            wget https://download.katalon.com/Katalon_Studio_Linux_64-7.4.0.tar.gz
+            tar -xzf Katalon_Studio_Linux_64-7.4.0.tar.gz
+            ./Katalon_Studio_Linux_64-7.4.0/katalon --install
+      
+            # Check Katalon installation
+            katalon --version
+      
+            adb devices
