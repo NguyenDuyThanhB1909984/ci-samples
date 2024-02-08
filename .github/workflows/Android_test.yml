@@ -11,6 +11,11 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - run: npm install @actions/core
 
       - name: Enable KVM
         run: |
@@ -18,13 +23,6 @@ jobs:
           sudo udevadm control --reload-rules
           sudo udevadm trigger --name-match=kvm
           
-      - name: Install Node
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 18
-      - run: npm install @actions/core
-     
-
       - name: Android Emulator with deviceId        
         uses: NguyenDuyThanhB1909984/android-emulator-runner@v2.30.2
         with:
