@@ -24,7 +24,7 @@ jobs:
           sudo udevadm trigger --name-match=kvm
           
       - name: Android Emulator with deviceId        
-        uses: NguyenDuyThanhB1909984/android-emulator-runner@v2.30.5
+        uses: NguyenDuyThanhB1909984/android-emulator-runner@v2.30.0
         with:
           api-level: 29
           script: adb devices
