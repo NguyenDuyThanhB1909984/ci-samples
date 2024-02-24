@@ -21,7 +21,7 @@ jobs:
         with:
           version: '8.2.0'
           projectPath: '${{ github.workspace }}'
-          args: '-noSplash -retry=0 -browserType=Chrome -statusDelay=15 -testSuitePath="Test Suites/TS_Demo" -apiKey= ${{ secrets.KATALON_API_KEY }} --config -webui.autoUpdateDrivers=false -chromeDriverPath=./chromedriver/chromedriver-win32/chromedriver.exe'
+          args: '-noSplash -retry=0 -browserType=Chrome -statusDelay=15 -testSuitePath="Test Suites/TS_Demo" -apiKey= ${{ secrets.KATALON_API_KEY }} --config -webui.autoUpdateDrivers=true'
 
       - name: Upload Reports
         if: always()
