@@ -30,9 +30,8 @@ jobs:
       - name: Start Android Emulator
         uses: vgaidarji/android-github-actions-emulator@v1.0.1
         with:
-          api-level: 29
-          target: default
-          arch: x86
-          profile: Pixel_2_API_29
+          entryPoint: start
+          args: -no-snapshot-save -no-boot-anim
+
       - name: Run Android Tests
         run: adb devices
