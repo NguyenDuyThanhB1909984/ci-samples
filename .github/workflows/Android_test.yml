@@ -6,29 +6,34 @@ on:
     branches: [ master ]
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
-    steps:
-      - name: checkout
-        uses: actions/checkout@v4
-      - name: Install Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-      - run: npm install @actions/core
 
-      - name: Enable KVM
-        run: |
-          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
-          sudo udevadm control --reload-rules
-          sudo udevadm trigger --name-match=kvm
-          
-      # - name: Android Emulator with deviceId        
-      #   uses: NguyenDuyThanhB1909984/android-emulator-runner@v2.30.0
-      #   with:
-      #     api-level: 29
-      #     script: adb devices
-      - name: Android Emulator
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: '11'
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Start Android Emulator
         uses: vgaidarji/android-github-actions-emulator@v1.0.1
-            
+        with:
+          api-level: 29
+          target: default
+          arch: x86
+          profile: Pixel_2_API_29
+
+      - name: Run Android Tests
       - run: adb devices
