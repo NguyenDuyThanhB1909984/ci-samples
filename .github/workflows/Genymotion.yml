@@ -6,24 +6,39 @@ on:
 jobs:
   build:
     runs-on: macos-latest
+    # steps:
+    # - name: Checkout
+    #   uses: actions/checkout@v2
+
+    # - name: Katalon Studio Github Action
+    #   uses: katalon-studio/katalon-studio-github-action@v3.0
+    #   with:
+    #       version: '9.3.0'
+    #       projectPath: '${{ github.workspace }}'
+    #       args: '--config -webui.autoUpdateDrivers=false -noSplash -retry=0 -browserType=Chrome -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest" -apiKey=${{ secrets.KATALON_API_KEY }}'
+    # - name: Upload Reports
+    #   if: always()
+    #   uses: actions/upload-artifact@v4
+    #   with:
+    #     name: Katalon Reports
+    #     path: ${{ github.workspace }}/Reports/**/*
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    # - name: Download ChromeDriver
-    #   run: |
-    #       curl -L https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/120.0.6099.109/win32/chromedriver-win32.zip -o chromedriver.zip
-    # - name: Download and Unzip ChromeDriver
-    #   run: |
-    #       unzip chromedriver.zip
-    - name: Katalon Studio Github Action
-      uses: katalon-studio/katalon-studio-github-action@v3.0
-      with:
-          version: '9.3.0'
-          projectPath: '${{ github.workspace }}'
-          args: '--config -webui.autoUpdateDrivers=false -noSplash -retry=0 -browserType=Chrome -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest" -apiKey=${{ secrets.KATALON_API_KEY }}'
-    - name: Upload Reports
-      if: always()
-      uses: actions/upload-artifact@v4
-      with:
-        name: Katalon Reports
-        path: ${{ github.workspace }}/Reports/**/*
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - run: npm install @actions/core
+
+      - name: Enable KVM
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+          
+      - name: Android Emulator with deviceId        
+        uses: NguyenDuyThanhB1909984/android-emulator-runner@v2.30.0
+        with:
+          api-level: 29
+          script: adb devices
