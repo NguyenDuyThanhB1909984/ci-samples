@@ -34,6 +34,5 @@ jobs:
           target: default
           arch: x86
           profile: Pixel_2_API_29
-
-      
-      - run: adb devices
+      - name: Run Android Tests
+        run: adb devices
