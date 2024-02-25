@@ -1,31 +1,55 @@
-name: CI
+# name: CI
 
+# on:
+#   workflow_dispatch:
+#   pull_request:
+#     branches: [ master ]
+
+# jobs:
+#   build:
+#     runs-on: windows-latest
+
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v2
+
+#       - name: Create Reports Folder
+#         run: mkdir -p ${{ github.workspace }}/Reports
+
+#       - name: Katalon Studio Github Action
+#         uses: katalon-studio/katalon-studio-github-action@v3.0
+#         with:
+#           version: '9.3.0'
+#           projectPath: '${{ github.workspace }}'
+#           args: '-noSplash -retry=0 -browserType=Chrome -statusDelay=15 -testSuitePath="Test Suites/TS_Demo" -apiKey= ${{ secrets.KATALON_API_KEY }} --config -webui.autoUpdateDrivers=true'
+
+#       - name: Upload Reports
+#         if: always()
+#         uses: actions/upload-artifact@v4
+#         with:
+#           name: test-reports
+#           path: '${{ github.workspace }}/Reports/**/*'
+
+name: CI
 on:
   workflow_dispatch:
   pull_request:
     branches: [ master ]
-
 jobs:
   build:
     runs-on: windows-latest
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Create Reports Folder
-        run: mkdir -p ${{ github.workspace }}/Reports
-
-      - name: Katalon Studio Github Action
-        uses: katalon-studio/katalon-studio-github-action@v3.0
-        with:
-          version: '9.3.0'
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Katalon Studio Github Action
+      uses: katalon-studio/katalon-studio-github-action@v3.0
+      with:
+          version: '9.2.0'
           projectPath: '${{ github.workspace }}'
-          args: '-noSplash -retry=0 -browserType=Chrome -statusDelay=15 -testSuitePath="Test Suites/TS_Demo" -apiKey= ${{ secrets.KATALON_API_KEY }} --config -webui.autoUpdateDrivers=true'
-
-      - name: Upload Reports
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: test-reports
-          path: '${{ github.workspace }}/Reports/**/*'
+          args: '--config -webui.autoUpdateDrivers=true -noSplash -retry=0 -browserType=Chrome -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest" -apiKey=${{ secrets.KATALON_API_KEY }}'
+    - name: Upload Reports
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: Katalon Reports
+        path: ${{ github.workspace }}/Reports/**/*
