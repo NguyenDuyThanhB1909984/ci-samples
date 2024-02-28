@@ -24,9 +24,6 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Install Dependencies
-        run: npm install
-
       - name: Start Android Emulator
         uses: reactivecircus/android-emulator-runner@v2
         with:
